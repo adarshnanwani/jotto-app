@@ -5,6 +5,14 @@ import React from 'react';
  * @function
  * @returns {JSX.Element} - Rendered component (or null if 'success' prop is false.)
  */
-export default () => {
-  return <div></div>;
+export default ({ success }) => {
+  return success ? (
+    <div data-test='component-congrats'>
+      <span data-test='congrats-message'>
+        Congratulation! You guessed the word!
+      </span>
+    </div>
+  ) : (
+    <div data-test='component-congrats'></div>
+  );
 };
