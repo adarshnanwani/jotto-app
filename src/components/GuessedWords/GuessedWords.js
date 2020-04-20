@@ -6,7 +6,12 @@ const GuessedWords = ({ guessedWords }) => {
 };
 
 GuessedWords.propTypes = {
-  guessedWords: PropTypes.array,
+  guessedWords: PropTypes.arrayOf(
+    PropTypes.shape({
+      guessedWord: PropTypes.string.isRequired,
+      letterMatchCount: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default GuessedWords;
