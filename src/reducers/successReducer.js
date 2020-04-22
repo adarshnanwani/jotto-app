@@ -8,7 +8,8 @@ const initialState = false;
  * @returns {boolean} - new success state.
  */
 export default (state = initialState, action) => {
-  switch (action.type) {
+  const { type } = action;
+  switch (type) {
     case actionTypes.CORRECT_GUESS:
       return true;
     default:
