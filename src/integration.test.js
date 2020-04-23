@@ -31,10 +31,12 @@ describe('guessWord action dispatcher', () => {
       const expectedState = {
         ...initialState,
         success: true,
-        guessedWords: {
-          guessedWord: secretWord,
-          letterMatchCount: secretWord.length,
-        },
+        guessedWords: [
+          {
+            guessedWord: secretWord,
+            letterMatchCount: secretWord.length,
+          },
+        ],
       };
       expect(newState).toEqual(expectedState);
     });
